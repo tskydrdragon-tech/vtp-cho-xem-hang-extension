@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Thay đổi Khách Xem Hàng - ViettelPost",
+  "version": "1.0",
+  "description": "Tự động đổi chữ KHÔNG XEM HÀNG thành CHO XEM HÀNG",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.viettelpost.vn/*", "*://*.viettelpost.com.vn/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_title": "Click để sửa chữ nhanh"
+  }
+}
